@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            
+            <h2 class="logo">F<span>D</span></h2>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+
+                <div class="search-bar">
+                    <input type="text" placeholder=" Search...">
+                    <button type="submit" class="login">Login</button>
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+        </div>
+
+        <div class="container">
+            <label for="" class="icon-close"><i class="fa fa-times" aria-hidden="true"></i></label>
+
+            <div class="card">
+                <h3>Login</h3>
+                <form action="#">
+                    <div class="input-card">
+                        <span class="icon">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-card">
+                        <span class="icon">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-me">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn-login">Login</button>
+                </form>
+            </div>
+        </div> 
+
+        <div class="main-section">
+            <h1 class="fdel">FLORAL <span>DELIGHTS</span></h1>
+            <p class="sen">"Our love for flowers blossomed into a passion for creating stunning <br> arrangements that bring joy 
+                 and beauty to people's lives. For over a <br> decade, our dedicated team of florists has been crafting unique 
+                 and <br> enchanting bouquets for every occasion. We invite you to discover the <br> artistry and love that goes 
+                 into each of our creations."</p>
+
+            <div class="btn">
+                <button><a href="products.html"> Shop Now <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></button>
+                <button class="lrm"><a href="about.html">Learn More <i class="fa fa-info-circle" aria-hidden="true"></i></a></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const btnPopup = document.querySelector('.login');
+        const iconClose = document.querySelector('.icon-close');
+
+        btnPopup.addEventListener('click', ()=> {
+            container.classList.add('active-popup');
+        });
+
+        iconClose.addEventListener('click', ()=> {
+            container.classList.remove('active-popup');
+        });
+    </script>
+
+</body>
+</html>
